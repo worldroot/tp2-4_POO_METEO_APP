@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Meteo</title>
+</head>
+<body>
+	   <div th:insert="~{addresses :: my-fragment1}"></div>
+
+
+ <div data-th-text="${ address }"></div>
+  <div data-th-text="${ GEO }"></div>
+</body>
+</html>

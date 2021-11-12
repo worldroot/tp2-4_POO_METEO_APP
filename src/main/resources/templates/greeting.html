@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+  <html xmlns:th="http://www.thymeleaf.org">
+    <head>
+      <title> Blog </title>
+        <meta  charset="UTF-8" />
+     </head>
+
+    <body>
+    	   <div th:insert="~{addresses :: my-fragment1}"></div>
+    
+      <p th:text="${ 'Bonjour' + nomTemplate}" />
+    </body>
+  </html>

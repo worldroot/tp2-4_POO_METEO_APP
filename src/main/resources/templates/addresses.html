@@ -1,0 +1,33 @@
+<!DOCTYPE HTML >
+<html xmlns:th="http://www.thymeleaf.org">
+<head >
+	<title> Adresses </title >
+	<meta charset="UTF-8" />
+</head >
+<body>
+
+    <ul th:fragment="my-fragment1">
+        <li><a th:href="@{/adresses}">Addresses</a></li>
+        <li><a th:href="@{/adresse}">Adresse</a></li>
+    </ul>
+    
+	<h1> Les differentes adresses </h1>
+	<table border=1>
+		<tr>
+			<th>Content</th>
+			<th>Date</th>
+			<th>Author</th>
+		</tr>
+	   <th:block th:each="address : ${allAdresses}">
+	      <tr>
+	         <td th:text="${address.content}">...</td>
+
+	         <td th:text="${address.creation}">...</td>
+	        <td th:text="${address.auteur}">...</td>
+	         
+	      </tr>
+	   </th:block>
+	</table>
+	
+</body>
+</html>
